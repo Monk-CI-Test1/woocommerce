@@ -1,22 +1,8 @@
 name: 'CI'
 on:
-  pull_request:
   push:
-    paths:
-      - '**'
-      - '!docs/**'
-      - '!**/changelog/**'
-      - '!.cursor/**'
-      - '!**/*.md'
-      - '!**/changelog.txt'
-      - '!.gitignore'
-      - '!.coderabbit.yml'
-      - '!CODEOWNERS'
-      - '!.github/**'
-      - '.github/workflows/ci.yml'
-    branches:
-      - 'trunk'
-      - 'release/*'
+    branches: [main]
+
   workflow_call:
     inputs:
       trigger:
